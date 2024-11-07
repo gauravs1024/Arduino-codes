@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+        *{
+margin: 0;
+padding: 0 auto;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+text-align: center;
+border: 1px solid black;
+margin:100px 500px 0px 500px;
+padding: 50px;
+border-radius: 12px;
+background-color: bisque;
+
+}
+h1{
+text-align: justify;
+}
+#calci{
+text-align: justify;
+padding: 10px;
+
+}
+#calciinput,select,button{
+margin: 10px;
+width: 100%;
+}
+input,select{
+padding: 5px;
+
+}
+button{
+padding: 10px;
+background-color: orange;
+border-radius:12px ;
+font-weight: bold;
+font-size: 20px;
+transition-duration: 1s;
+}
+button:hover{
+color: white;
+background-color: rgb(223, 67, 67);
+transition-duration: 1s;
+
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Simple Calculator <br>CREATED BY MUSKAN</br></h2>
+<div  id="calci">
+<input type="number" id="num1" placeholder="Enter number"  ><br>
+<input type="number" id="num2" placeholder="Enter number" ><br>
+<select id="opr" >
+<option selected>Select operand</option>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="/">/</option>
+<option value="*">*</option>
+<option value="%">%</option>
+</select><br>
+<button onclick="cal()">Calculate</button><br>
+
+</div>
+<h3 id="result"></h3>
+
+</div>
+<script>
+
+functioncal(){
+var num1 =document.getElementById('num1').value;
+var num2= document.getElementById('num2').value;
+varopr = document.getElementById('opr').value;
+var res;
+if (opr == '+'){
+res = parseInt(num1)+parseInt(num2);
+    }
+else if (opr == '-'){
+res = parseInt(num1)-parseInt(num2);
+     }
+else if (opr == '*'){
+res = parseInt(num1)*parseInt(num2);
+     }
+else if (opr == '/'){
+res = parseInt(num1)/parseInt(num2);
+     }
+else if (opr == '%'){
+res = parseInt(num1)%parseInt(num2);
+     }
+else{
+alert("Please select any operand")
+     }
+
+document.getElementById('result').innerHTML = "Result: "+res;
+
+}
+
+</script>
+</body>
+</html>
+
+

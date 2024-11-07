@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1> Student registration form</h1>
+<form>
+<pre>
+Student name <input type="text" id="sname">
+<button onclick="validateform()" >Submit</button
+</pre>
+
+</form>
+<script type="text/javascript">
+function validateform(){
+var name=document.getElementById("sname").value;
+var regx=/^([a-zA-Z_])(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/;
+if(!regx.test(name)){
+alert("no match");}
+}
+
+</script>
+</body>
+</html>
